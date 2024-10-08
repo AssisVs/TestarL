@@ -18,7 +18,7 @@
 
         <div class="flex items-center justify-end mt-4">
             <x-primary-button class="btn btn-primary">
-                {{ __('Link de redefinição de senha de e-mai') }}
+                {{ __('Link de redefinição de senha de e-mail') }}
             </x-primary-button>
         </div>
     </form>
