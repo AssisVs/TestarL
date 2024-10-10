@@ -1,11 +1,14 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\VeiculosController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('/auth/login');
 });
+
+Route::get('/user', [VeiculosController::class, 'listar'])->name('user.listar');
 
 Route::any('/pages/exemplo', function () {
     return view('/pages/exemplo');
