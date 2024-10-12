@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Veiculos;
+use App\Models\Veiculo;
 use Illuminate\Http\Request;
 
 class VeiculosController extends Controller
@@ -11,7 +11,7 @@ class VeiculosController extends Controller
     {
 
     /**   Recuperar os registros do banco */
-        $veiculos = Veiculos::get();
+        $veiculos = Veiculo::get();
         return view('user.listar', ['veiculos' => $veiculos]);
     }
 

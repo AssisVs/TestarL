@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Veiculos extends Model
+class Veiculo extends Model
 {
     use HasFactory;
 
@@ -13,5 +13,5 @@ class Veiculos extends Model
     protected $table = 'veiculos';
 
     // Indicar quais colunas podem ser cadastrada
-    protected $fillable = ['placa', 'alocado_em', 'liberado_em'];
+    protected $fillable = ['placa', 'status', 'alocado_em', 'liberado_em'];
 }
