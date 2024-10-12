@@ -20,10 +20,10 @@ class VeiculoFactory extends Factory
     {
         return [
 
-           'placa' => $this->faker->name(),
+           'placa' => $this->faker->unique()->name(),
             'status' => $this->faker->name(),
-            'alocado_em' => $this->faker->name(),
-            'liberado_em' => $this->faker->lastName(),
+            'alocado_em' => $this->faker->dateTime(),
+            'liberado_em' => $this->faker->dateTime(),
         ];
     }
 }
