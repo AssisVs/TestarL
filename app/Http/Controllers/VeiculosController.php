@@ -14,5 +14,4 @@ class VeiculosController extends Controller
         $veiculos = Veiculo::get();
         return view('user.listar', ['veiculos' => $veiculos]);
     }
-
 }
