@@ -1,14 +1,20 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\VeiculosController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\VeiculoController;
 use Illuminate\Support\Facades\Route;
+use VeiculoController as GlobalVeiculoController;
 
-Route::get('/', function () {
-    return view('/auth/login');
-});
+Route::get('/', [UserController::class, 'index'])->name('user.index');
 
-Route::get('/user', [VeiculosController::class, 'listar'])->name('user.listar');
+// Route::get('/', function () {
+//     return view('/auth/login');
+// });
+
+Route::get('/veiculos', [VeiculoController::class, 'listar'])->name('veiculos.listar');
+Route::get('/user', [UserController::class, 'listar1'])->name('user.listar1');
 
 Route::any('/pages/exemplo', function () {
     return view('/pages/exemplo');
